@@ -16,23 +16,6 @@ function updateCurrentDay() {
 updateCurrentDay();
 setInterval(updateCurrentDay, 1000); // Update every second (1000 milliseconds)
 
-
-function updateCurrentUTCTime() {
-  const currentUTCTimeElement = document.querySelector('[data-testid="currentUTCTimee"]');
-  
-  if (currentUTCTimeElement) {
-    const now = new Date();
-    const formattedUTCTime = now.toUTCString(); // Get UTC time as a string
-  
-    // Update the content of the element
-    currentUTCTimeElement.textContent = `${formattedUTCTime}`;
-  }
-}
-
-// Call the updateCurrentUTCTime function to set the initial time and update it periodically
-updateCurrentUTCTime();
-setInterval(updateCurrentUTCTime, 1000); // Update every second (1000 milliseconds)
-
 function updateCurrentUTCTimeInMilliseconds() {
   const currentUTCTimeMsElement = document.querySelector('[data-testid="currentUTCTime"]');
   
